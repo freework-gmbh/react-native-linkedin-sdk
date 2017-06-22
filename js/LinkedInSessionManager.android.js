@@ -21,6 +21,7 @@ const LinkedInSDK = {
   normalizeToken({expiresOn, ...token}) {
     return {
       expiresOn: new Date(expiresOn),
+      fromMobileSDK: true, // token is always from sdk
       ...token,
     };
   },
